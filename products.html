@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products - Gadget Galaxy</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Gadget Galaxy</a>
+
+    <div>
+      <a class="nav-link text-white d-inline mx-2" href="index.html">Home</a>
+      <a class="nav-link text-white d-inline mx-2" href="products.html">Products</a>
+      <a class="nav-link text-white d-inline mx-2" href="about.html">About</a>
+      <a class="nav-link text-white d-inline mx-2" href="contact.html">Contact</a>
+      <a class="nav-link text-white d-inline mx-2" href="cart.html">
+        Cart (
+        <span id="cartCount">0</span>
+        )
+
+      </a>
+      <a class="nav-link text-white d-inline mx-2" href="sort.html">Sort</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container mt-4">
+
+  <h1 class="text-center">Our Products</h1>
+
+  <!-- SEARCH -->
+
+<input
+  type="text"
+  id="search"
+  class="form-control w-50 mx-auto mt-3"
+  placeholder="Search Products..."
+>
+
+<div class="text-center mt-3">
+
+  <button
+    class="btn btn-dark"
+    onclick="filterProducts('all')"
+  >
+    All
+  </button>
+
+  <button
+    class="btn btn-primary"
+    onclick="filterProducts('audio')"
+  >
+    Audio
+  </button>
+
+  <button
+    class="btn btn-success"
+    onclick="filterProducts('computer')"
+  >
+    Computers
+  </button>
+
+  <button
+  class="btn btn-warning"
+  onclick="filterProducts('accessories')"
+>
+  Accessories
+</button>
+
+<button
+  class="btn btn-success"
+  onclick="filterProducts('phone')"
+>
+  Phones
+</button>
+
+</div>
+
+  <!-- PRODUCT GRID -->
+  <div class="row mt-4">
+
+    <!-- PRODUCT 1 -->
+    <div
+        class="col-md-4 mb-4 product-card"
+        data-category="audio">
+      <div class="card text-center p-3">
+        <img src="pngtree-wireless-headphone-png-image_20721964.png" class="img-fluid">
+        <h5>Headphones</h5>
+        <p>21000₸</p>
+        <button
+  class="btn btn-success buyBtn"
+
+  data-name="Headphones"
+
+  data-price="21000"
+
+  data-image="pngtree-wireless-headphone-png-image_20721964.png"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div
+  class="col-md-4 mb-4 product-card"
+  data-category="accessories"
+    >
+      <div class="card text-center p-3">
+        <img src="pngtree-the-smartwatch-banner-png-image_11919210.png" class="img-fluid">
+        <h5>Smart Watch</h5>
+        <p>10000₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="Smart Watch"
+
+  data-price="380000"
+
+  data-image="FINAL Project/pngtree-the-smartwatch-banner-png-image_11919210.png"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div
+  class="col-md-4 mb-4 product-card"
+  data-category="computer"
+    >
+      <div class="card text-center p-3">
+        <img src="pngtree-a-laptop-with-colorful-screen-png-image_14745825.png" class="img-fluid">
+        <h5>Laptop</h5>
+        <p>649000₸</p>
+        <button
+            class="btn btn-primary buyBtn"
+
+            data-name="Laptop"
+
+            data-price="649000"
+
+            data-image="pngtree-a-laptop-with-colorful-screen-png-image_14745825.png"
+        >
+
+            Add To Cart
+
+        </button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+   <div
+  class="col-md-4 mb-4 product-card"
+  data-category="phone"
+    >
+      <div class="card text-center p-3">
+        <img src="248-2480344_smartphone-png-image-background-mobile-phone-transparent-png.png" class="img-fluid">
+        <h5>Mobile Phone</h5>
+        <p>710000₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="Mobile Phone"
+
+  data-price="710000"
+
+  data-image="FINAL Project/248-2480344_smartphone-png-image-background-mobile-phone-transparent-png.png"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+   <div
+  class="col-md-4 mb-4 product-card"
+  data-category="phone"
+    >
+      <div class="card text-center p-3">
+        <img src="1291070-middle.png" class="img-fluid">
+        <h5>iPad</h5>
+        <p>210000₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="iPad"
+
+  data-price="210000"
+
+  data-image="FINAL Project/1291070-middle.png"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 6 -->
+   <div
+  class="col-md-4 mb-4 product-card"
+  data-category="audio"
+    >
+      <div class="card text-center p-3">
+        <img src="pngtree-front-of-music-audio-speaker-on-transparent-background-png-image_20349176.png" class="img-fluid">
+        <h5>Speaker</h5>
+        <p>21000₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="Speaker"
+
+  data-price="21000"
+
+  data-image="FINAL Project/pngtree-front-of-music-audio-speaker-on-transparent-background-png-image_20349176.png"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 7 -->
+   <div
+  class="col-md-4 mb-4 product-card"
+  data-category="accessories"
+    >
+      <div class="card text-center p-3">
+        <img src="mouse-png-22.jpg" class="img-fluid">
+        <h5>Mouse</h5>
+        <p>3100₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="Mouse"
+
+  data-price="3100"
+
+  data-image="FINAL Project/mouse-png-22.jpg"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 8 -->
+    <div
+  class="col-md-4 mb-4 product-card"
+  data-category="accessories"
+    >
+      <div class="card text-center p-3">
+        <img src="pngtree-portable-power-bank-with-usb-ports-isolated-on-transparent-background-png-image_21186957.png" class="img-fluid">
+        <h5>Power Bank</h5>
+        <p>20000₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="Power Bank"
+
+  data-price="20000"
+
+  data-image="FINAL Project/pngtree-portable-power-bank-with-usb-ports-isolated-on-transparent-background-png-image_21186957.png"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 9 -->
+    <div
+  class="col-md-4 mb-4 product-card"
+  data-category="accessories"
+    >
+      <div class="card text-center p-3">
+        <img src="photo-1541140532154-b024d705b90a.avif" class="img-fluid">
+        <h5>Keyboard</h5>
+        <p>3200₸</p>
+        <button
+  class="btn btn-primary buyBtn"
+
+  data-name="Keyboard"
+
+  data-price="3200"
+
+  data-image="FINAL Project/photo-1541140532154-b024d705b90a.avif"
+>
+
+  Add To Cart
+
+</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ACCORDION (SELF-STUDY COMPONENT) -->
+  <div class="accordion mt-4">
+
+    <div class="accordion-item">
+      <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#details">
+        Product Details
+      </button>
+
+      <div id="details" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          All products are high quality and available at affordable prices. 2 Years Warranty on all items.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3 mt-4">
+  © 2026 Gadget Galaxy
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
